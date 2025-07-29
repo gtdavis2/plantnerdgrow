@@ -173,16 +173,44 @@ function initMobileMenu() {
     
     if (!mobileToggle || !nav) return;
     
+    // Add close button to mobile menu
+    const closeButton = document.createElement('button');
+    closeButton.className = 'mobile-menu-close';
+    closeButton.innerHTML = '&times;';
+    closeButton.setAttribute('aria-label', 'Close menu');
+    closeButton.style.cssText = `
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1002;
+        display: none;
+    `;
+    
+    nav.appendChild(closeButton);
+    
     mobileToggle.addEventListener('click', () => {
         const isOpen = nav.classList.contains('mobile-open');
         
         if (isOpen) {
             nav.classList.remove('mobile-open');
             mobileToggle.setAttribute('aria-expanded', 'false');
+            closeButton.style.display = 'none';
         } else {
             nav.classList.add('mobile-open');
             mobileToggle.setAttribute('aria-expanded', 'true');
+            closeButton.style.display = 'block';
         }
+    });
+    
+    closeButton.addEventListener('click', () => {
+        nav.classList.remove('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        closeButton.style.display = 'none';
     });
     
     // Close mobile menu when clicking outside
@@ -190,6 +218,7 @@ function initMobileMenu() {
         if (!nav.contains(e.target) && !mobileToggle.contains(e.target)) {
             nav.classList.remove('mobile-open');
             mobileToggle.setAttribute('aria-expanded', 'false');
+            closeButton.style.display = 'none';
         }
     });
     
@@ -198,7 +227,18 @@ function initMobileMenu() {
         if (e.key === 'Escape') {
             nav.classList.remove('mobile-open');
             mobileToggle.setAttribute('aria-expanded', 'false');
+            closeButton.style.display = 'none';
         }
+    });
+    
+    // Close mobile menu when clicking on a nav link
+    const navLinks = nav.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('mobile-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            closeButton.style.display = 'none';
+        });
     });
 }
 
