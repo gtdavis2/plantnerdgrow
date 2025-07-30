@@ -628,6 +628,12 @@ p {
     
     .section .container {
         max-width: 2400px !important;
+        width: 2400px !important;
+    }
+    
+    .section .section-content {
+        max-width: none !important;
+        width: 100% !important;
     }
 }
 
