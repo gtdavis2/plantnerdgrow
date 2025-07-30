@@ -610,28 +610,12 @@ p {
 /* Strain Showcase */
 .strains-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.6rem;
     margin-top: 2.4rem;
-    max-width: 400px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Switch to 2 across earlier */
-@media (min-width: 600px) {
-    .strains-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 600px;
-    }
-}
-
-/* Ensure 3 across on very wide screens */
-@media (min-width: 1600px) {
-    .strains-grid {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 900px;
-    }
 }
 
 .strain-card {
