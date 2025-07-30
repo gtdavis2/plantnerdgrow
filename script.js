@@ -173,9 +173,58 @@ function initMobileMenu() {
     
     if (!mobileToggle || !nav) return;
     
-    // Add close button to mobile menu
+    // Create a separate mobile menu overlay
+    const mobileOverlay = document.createElement('div');
+    mobileOverlay.className = 'mobile-menu-overlay';
+    mobileOverlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000000;
+        z-index: 99999;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5rem 2rem 2rem 2rem;
+        gap: 2rem;
+    `;
+    
+    // Copy navigation links to overlay
+    const navLinks = nav.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        const clonedLink = link.cloneNode(true);
+        clonedLink.style.cssText = `
+            font-size: 1.5rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            width: 20%;
+            text-align: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            margin: 0 auto;
+        `;
+        
+        // Add hover effect
+        clonedLink.addEventListener('mouseenter', () => {
+            clonedLink.style.color = 'var(--secondary-color)';
+            clonedLink.style.textShadow = '0 0 8px rgba(123, 179, 240, 0.4)';
+        });
+        
+        clonedLink.addEventListener('mouseleave', () => {
+            clonedLink.style.color = 'var(--primary-color)';
+            clonedLink.style.textShadow = 'none';
+        });
+        
+        mobileOverlay.appendChild(clonedLink);
+    });
+    
+    // Add close button
     const closeButton = document.createElement('button');
-    closeButton.className = 'mobile-menu-close';
     closeButton.innerHTML = '&times;';
     closeButton.setAttribute('aria-label', 'Close menu');
     closeButton.style.cssText = `
@@ -187,57 +236,69 @@ function initMobileMenu() {
         color: var(--text-primary);
         font-size: 2rem;
         cursor: pointer;
-        z-index: 1002;
-        display: none;
+        z-index: 100000;
+        transition: var(--transition);
     `;
     
-    nav.appendChild(closeButton);
+    // Add hover effect to close button
+    closeButton.addEventListener('mouseenter', () => {
+        closeButton.style.color = 'var(--accent-color)';
+    });
     
+    closeButton.addEventListener('mouseleave', () => {
+        closeButton.style.color = 'var(--text-primary)';
+    });
+    
+    mobileOverlay.appendChild(closeButton);
+    document.body.appendChild(mobileOverlay);
+    
+    // Toggle mobile menu
     mobileToggle.addEventListener('click', () => {
-        const isOpen = nav.classList.contains('mobile-open');
+        const isOpen = mobileOverlay.style.display === 'flex';
         
         if (isOpen) {
-            nav.classList.remove('mobile-open');
+            mobileOverlay.style.display = 'none';
+            mobileToggle.style.display = 'block';
             mobileToggle.setAttribute('aria-expanded', 'false');
-            closeButton.style.display = 'none';
         } else {
-            nav.classList.add('mobile-open');
+            mobileOverlay.style.display = 'flex';
+            mobileToggle.style.display = 'none';
             mobileToggle.setAttribute('aria-expanded', 'true');
-            closeButton.style.display = 'block';
         }
     });
     
+    // Close handlers
     closeButton.addEventListener('click', () => {
-        nav.classList.remove('mobile-open');
+        mobileOverlay.style.display = 'none';
+        mobileToggle.style.display = 'block';
         mobileToggle.setAttribute('aria-expanded', 'false');
-        closeButton.style.display = 'none';
     });
     
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !mobileToggle.contains(e.target)) {
-            nav.classList.remove('mobile-open');
+    // Close when clicking outside
+    mobileOverlay.addEventListener('click', (e) => {
+        if (e.target === mobileOverlay) {
+            mobileOverlay.style.display = 'none';
+            mobileToggle.style.display = 'block';
             mobileToggle.setAttribute('aria-expanded', 'false');
-            closeButton.style.display = 'none';
         }
     });
     
-    // Close mobile menu on escape key
+    // Close on escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            nav.classList.remove('mobile-open');
+        if (e.key === 'Escape' && mobileOverlay.style.display === 'flex') {
+            mobileOverlay.style.display = 'none';
+            mobileToggle.style.display = 'block';
             mobileToggle.setAttribute('aria-expanded', 'false');
-            closeButton.style.display = 'none';
         }
     });
     
-    // Close mobile menu when clicking on a nav link
-    const navLinks = nav.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
+    // Close when clicking on links
+    const overlayLinks = mobileOverlay.querySelectorAll('.nav-link');
+    overlayLinks.forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('mobile-open');
+            mobileOverlay.style.display = 'none';
+            mobileToggle.style.display = 'block';
             mobileToggle.setAttribute('aria-expanded', 'false');
-            closeButton.style.display = 'none';
         });
     });
 }

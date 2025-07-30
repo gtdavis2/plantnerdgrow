@@ -442,7 +442,14 @@ p {
     color: var(--text-primary);
     cursor: pointer;
     padding: 0.5rem;
-    z-index: 1001;
+    z-index: 10000;
+}
+
+/* Desktop - hide hamburger menu */
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none !important;
+    }
 }
 
 .mobile-menu-toggle:hover {
@@ -458,12 +465,39 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #000000;
-    z-index: 1000;
+    background: #000000 !important;
+    z-index: 9999;
     padding: 5rem 2rem 2rem 2rem;
     justify-content: flex-start;
     align-items: center;
     gap: 2rem;
+    opacity: 1 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.nav.mobile-open::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000 !important;
+    z-index: -1;
+    opacity: 1 !important;
+}
+
+.nav.mobile-open::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000 !important;
+    z-index: -2;
+    opacity: 1 !important;
 }
 
 .nav.mobile-open .nav-link {
@@ -476,6 +510,10 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Account for fixed header */
+    }
+    
     .nav {
         display: none;
     }
@@ -487,6 +525,7 @@ p {
     .hero {
         min-height: 80vh;
         padding: 2rem 0;
+        margin-top: -80px; /* Compensate for body padding */
     }
     
     .page-header {
@@ -510,7 +549,11 @@ p {
     }
     
     .section {
-        padding: 3rem 0;
+        padding: 5rem 0 3rem 0;
+    }
+    
+    .section-alt {
+        padding: 5rem 0 3rem 0;
     }
     
     .container {
