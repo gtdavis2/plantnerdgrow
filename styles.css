@@ -98,7 +98,6 @@ p {
     left: 0;
     right: 0;
     background: var(--background-primary);
-    border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     transition: var(--transition);
 }
