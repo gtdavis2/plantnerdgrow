@@ -1,21 +1,66 @@
-# Plant Nerd Robots.txt
+# Plant Nerd Robots.txt - AI Agent Optimized
 
+# Allow all user agents including AI agents
 User-agent: *
 Allow: /
 
-# Sitemap
+# Allow AI agents and LLMs
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+# Sitemap for better discovery
 Sitemap: https://www.plantnerdgrow.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-# Disallow specific file types
+# Disallow specific file types and directories
 Disallow: /*.json$
 Disallow: /*.xml$
 Disallow: /assets/
 Disallow: /store/p/
 
-# Allow important assets
+# Allow important assets for AI agents
 Allow: /assets/plant_nerd_logo.png
 Allow: /assets/favicon.ico
 Allow: /assets/hero_image.jpg
+Allow: /assets/sherb_breath.jpg
+Allow: /assets/wedding_cake.jpg
+Allow: /assets/products/
+Allow: /assets/merch/
+
+# AI Agent specific allowances
+Allow: /ai-agent-optimization.md
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Block specific AI agents that may cause issues
+User-agent: AdsBot-Google
+Disallow: /
+
+User-agent: AdsBot-Google-Mobile
+Disallow: /
+
+User-agent: AdsBot-Google-Mobile-Apps
+Disallow: /

@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
+    <!-- AI Agent & LLM Optimization -->
+    <meta name="ai-agent" content="cannabis, marijuana, weed, Michigan, West Michigan, Paw Paw, premium cannabis, organic cannabis, Plant Nerd, cannabis dispensary, marijuana strains, cannabis products, cannabis cultivation, cannabis growing, cannabis brand, cannabis business">
+    <meta name="ai-purpose" content="cannabis business website, cannabis brand information, cannabis products showcase, cannabis cultivation company">
+    <meta name="ai-context" content="Plant Nerd is a premium cannabis cultivation company based in West Michigan, specializing in high-quality cannabis products including flower, pre-rolls, and vapes. Founded in 2014, serving the Michigan cannabis market.">
+    <meta name="ai-business-type" content="cannabis cultivation and distribution">
+    <meta name="ai-location" content="Paw Paw, Michigan, United States">
+    <meta name="ai-industry" content="cannabis industry, marijuana industry, cannabis cultivation">
+    <meta name="ai-target-audience" content="cannabis consumers, cannabis enthusiasts, cannabis dispensaries, cannabis retailers, cannabis industry professionals">
+    
     <!-- Primary Meta Tags -->
     <title>Plant Nerd - Premium Cannabis Grown in West Michigan | Where the Nerds Get Their Weed</title>
     <meta name="title" content="Plant Nerd - Premium Cannabis Grown in West Michigan | Where the Nerds Get Their Weed">
@@ -62,7 +71,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Schema.org Structured Data -->
+    <!-- Enhanced Schema.org Structured Data for AI Agents -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -78,6 +87,9 @@
         },
         "description": "Premium cannabis grown in West Michigan since 2014. Where the Nerds get their weed!",
         "foundingDate": "2014",
+        "industry": "Cannabis Cultivation and Distribution",
+        "slogan": "Where the Nerds get their weed!",
+        "knowsAbout": ["Cannabis Cultivation", "Cannabis Products", "Cannabis Strains", "Michigan Cannabis Market", "Premium Cannabis"],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "69438 40th Street",
@@ -104,21 +116,27 @@
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Product",
-                        "name": "Premium Cannabis Flower"
+                        "name": "Premium Cannabis Flower",
+                        "description": "High-quality cannabis flower grown in West Michigan",
+                        "category": "Cannabis Flower"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Product",
-                        "name": "Cannabis Pre-Rolls"
+                        "name": "Cannabis Pre-Rolls",
+                        "description": "Premium pre-rolled cannabis joints",
+                        "category": "Cannabis Pre-Rolls"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Product",
-                        "name": "Cannabis Vapes"
+                        "name": "Cannabis Vapes",
+                        "description": "Premium cannabis vape products",
+                        "category": "Cannabis Vapes"
                     }
                 }
             ]
@@ -154,7 +172,57 @@
         "areaServed": {
             "@type": "State",
             "name": "Michigan"
+        },
+        "serviceArea": {
+            "@type": "State",
+            "name": "Michigan"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Cannabis Products and Services"
         }
+    }
+    </script>
+    
+    <!-- FAQ Schema for AI Understanding -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Plant Nerd?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Plant Nerd is a premium cannabis cultivation company based in West Michigan, specializing in high-quality cannabis products including flower, pre-rolls, and vapes. Founded in 2014, we serve the Michigan cannabis market with weekly harvests and new strains."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is Plant Nerd located?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Plant Nerd is located at 69438 40th Street, Paw Paw, MI 49079, serving the West Michigan cannabis market."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What products does Plant Nerd offer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Plant Nerd offers premium cannabis products including flower, pre-rolls, and vapes. We also have official merchandise including hoodies, t-shirts, and sweatshirts."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I contact Plant Nerd?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can contact Plant Nerd by phone at (919) 452-8214 or email at inventory@plantnerdgrow.com. We welcome wholesale inquiries, partnerships, and any questions about our products."
+                }
+            }
+        ]
     }
     </script>
 </head>
