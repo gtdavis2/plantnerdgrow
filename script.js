@@ -199,25 +199,28 @@ function initMobileMenu() {
         clonedLink.style.cssText = `
             font-size: 1.5rem;
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            width: 20%;
+            border-bottom: 1px solid transparent;
+            width: auto;
             text-align: center;
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
             margin: 0 auto;
+            position: relative;
         `;
         
         // Add hover effect
         clonedLink.addEventListener('mouseenter', () => {
             clonedLink.style.color = 'var(--secondary-color)';
             clonedLink.style.textShadow = '0 0 8px rgba(123, 179, 240, 0.4)';
+            clonedLink.style.borderBottom = '1px solid rgba(255, 255, 255, 0.3)';
         });
         
         clonedLink.addEventListener('mouseleave', () => {
             clonedLink.style.color = 'var(--primary-color)';
             clonedLink.style.textShadow = 'none';
+            clonedLink.style.borderBottom = '1px solid transparent';
         });
         
         mobileOverlay.appendChild(clonedLink);
