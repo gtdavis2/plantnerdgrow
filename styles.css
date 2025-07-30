@@ -627,8 +627,8 @@ p {
     }
     
     .section .container {
-        max-width: 2400px !important;
-        width: 2400px !important;
+        max-width: 1500px !important;
+        width: 1500px !important;
     }
     
     .section .section-content {
