@@ -623,11 +623,11 @@ p {
 
 @media (min-width: 1200px) {
     .strains-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(350px, 1fr));
     }
     
     .section .container {
-        max-width: 1800px;
+        max-width: 1200px;
     }
 }
 
