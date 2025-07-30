@@ -618,8 +618,16 @@ p {
     margin-right: auto;
 }
 
+/* Switch to 2 across earlier */
+@media (min-width: 600px) {
+    .strains-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+}
+
 /* Ensure 3 across on very wide screens */
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
     .strains-grid {
         grid-template-columns: repeat(3, 1fr);
         max-width: 900px;
