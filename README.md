@@ -67,4 +67,4 @@ This website is deployed on GitHub Pages and can be accessed at: `https://[your-
 
 ## 📄 License
 
-All rights reserved. Plant Nerd © 2024 
+All rights reserved. Plant Nerd © 2025 
