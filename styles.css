@@ -291,15 +291,11 @@ p {
 /* Modern Sections */
 .section {
     padding: 5rem 0;
-    background: var(--background-primary);
-}
-
-.section-alt {
     background: linear-gradient(135deg, var(--background-secondary) 0%, #111111 100%);
     position: relative;
 }
 
-.section-alt::before {
+.section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -310,7 +306,7 @@ p {
     opacity: 0.3;
 }
 
-.section-alt::after {
+.section::after {
     content: '';
     position: absolute;
     top: 0;
@@ -319,6 +315,11 @@ p {
     bottom: 0;
     background: rgba(128, 128, 128, 0.1);
     pointer-events: none;
+}
+
+.section-alt {
+    background: var(--background-primary);
+    position: relative;
 }
 
 .section-content {
@@ -387,16 +388,7 @@ p {
     position: relative;
 }
 
-.footer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(128, 128, 128, 0.1);
-    pointer-events: none;
-}
+
 
 .footer-content {
     display: grid;
