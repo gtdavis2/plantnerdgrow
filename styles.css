@@ -624,7 +624,7 @@ p {
 @media (min-width: 1200px) {
     .strains-grid {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 1200px;
+        max-width: 1800px;
         margin-left: auto;
         margin-right: auto;
     }
