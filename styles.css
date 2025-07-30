@@ -207,7 +207,11 @@ p {
     margin-bottom: 2rem;
     color: var(--text-primary);
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        4px 4px 8px rgba(0, 0, 0, 0.8),
+        6px 6px 12px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(0, 0, 0, 0.6);
     animation: fadeInUp 1s ease-out 0.2s both;
     line-height: 1.4;
 }
@@ -454,8 +458,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
+    background: #000000;
     z-index: 1000;
     padding: 5rem 2rem 2rem 2rem;
     justify-content: flex-start;
