@@ -610,7 +610,7 @@ p {
 /* Strain Showcase */
 .strains-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.6rem;
     margin-top: 2.4rem;
     max-width: 1000px;
@@ -618,35 +618,11 @@ p {
     margin-right: auto;
 }
 
-/* Ensure consistent card width - always the width of 2-across */
-.strain-card {
-    width: 280px;
-    justify-self: center;
-}
-
-/* Ensure 3 across on wide screens */
-@media (min-width: 1200px) {
+/* Ensure 3 across on very wide screens */
+@media (min-width: 1400px) {
     .strains-grid {
         grid-template-columns: repeat(3, 1fr);
         max-width: 900px;
-    }
-    
-    .strain-card {
-        width: 280px;
-        justify-self: center;
-    }
-}
-
-/* 2 across on medium screens */
-@media (min-width: 768px) and (max-width: 1199px) {
-    .strains-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 600px;
-    }
-    
-    .strain-card {
-        width: 280px;
-        justify-self: center;
     }
 }
 
@@ -949,8 +925,6 @@ p {
     }
     
     .strain-card {
-        width: 280px;
-        justify-self: center;
         transform: scale(1); /* Full size on mobile */
     }
     
