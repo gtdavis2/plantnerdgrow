@@ -261,11 +261,11 @@ function initMobileMenu() {
         
         if (isOpen) {
             mobileOverlay.style.display = 'none';
-            mobileToggle.style.display = 'block';
+            mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
             mobileToggle.setAttribute('aria-expanded', 'false');
         } else {
             mobileOverlay.style.display = 'flex';
-            mobileToggle.style.display = 'none';
+            mobileToggle.innerHTML = '<span class="sr-only">Close</span>&times;';
             mobileToggle.setAttribute('aria-expanded', 'true');
         }
     });
@@ -273,7 +273,7 @@ function initMobileMenu() {
     // Close handlers
     closeButton.addEventListener('click', () => {
         mobileOverlay.style.display = 'none';
-        mobileToggle.style.display = 'block';
+        mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
         mobileToggle.setAttribute('aria-expanded', 'false');
     });
     
@@ -281,7 +281,7 @@ function initMobileMenu() {
     mobileOverlay.addEventListener('click', (e) => {
         if (e.target === mobileOverlay) {
             mobileOverlay.style.display = 'none';
-            mobileToggle.style.display = 'block';
+            mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
             mobileToggle.setAttribute('aria-expanded', 'false');
         }
     });
@@ -290,7 +290,7 @@ function initMobileMenu() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileOverlay.style.display === 'flex') {
             mobileOverlay.style.display = 'none';
-            mobileToggle.style.display = 'block';
+            mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
             mobileToggle.setAttribute('aria-expanded', 'false');
         }
     });
@@ -300,7 +300,7 @@ function initMobileMenu() {
     overlayLinks.forEach(link => {
         link.addEventListener('click', () => {
             mobileOverlay.style.display = 'none';
-            mobileToggle.style.display = 'block';
+            mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
             mobileToggle.setAttribute('aria-expanded', 'false');
         });
     });
