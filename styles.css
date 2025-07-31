@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border-top: none !important;
 }
 
 html {
@@ -12,7 +13,9 @@ html {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    border: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 body {
@@ -24,7 +27,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
-    border: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* Modern CSS Variables - Blue on Black Theme */
@@ -129,7 +134,7 @@ p {
 .logo-image {
     height: 40px;
     width: auto;
-    filter: drop-shadow(0 0 5px rgba(74, 144, 226, 0.2));
+    filter: none;
 }
 
 .logo-text {
@@ -138,7 +143,7 @@ p {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--primary-color);
-    text-shadow: 0 0 5px rgba(74, 144, 226, 0.2);
+    text-shadow: none;
 }
 
 .logo:hover .logo-image {
@@ -229,6 +234,7 @@ p {
     background: var(--background-primary);
     padding: 6rem 0 4rem 0;
     border-bottom: 1px solid var(--border-color);
+    border-top: none !important;
 }
 
 .page-header-content {
