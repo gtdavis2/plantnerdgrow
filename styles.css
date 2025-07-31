@@ -187,7 +187,7 @@ p {
 .nav-link {
     color: var(--primary-color);
     text-decoration: none;
-    font-family: 'Cotton', sans-serif;
+    font-family: 'Rock Salt', cursive;
     font-weight: 400;
     transition: var(--transition);
     position: relative;
@@ -466,7 +466,7 @@ p {
     display: none;
     background: none;
     border: none;
-    font-family: 'Cotton', sans-serif;
+    font-family: 'Rock Salt', cursive;
     font-size: 1.5rem;
     color: var(--text-primary);
     cursor: pointer;
@@ -556,7 +556,7 @@ p {
     text-align: center;
     color: var(--primary-color);
     text-decoration: none;
-    font-family: 'Cotton', sans-serif;
+    font-family: 'Rock Salt', cursive;
     font-weight: 400;
     transition: var(--transition);
     margin: 0 auto;
@@ -577,7 +577,7 @@ p {
     background: none;
     border: none;
     color: var(--text-primary);
-    font-family: 'Cotton', sans-serif;
+    font-family: 'Rock Salt', cursive;
     font-size: 2rem;
     cursor: pointer;
     z-index: 100000;
