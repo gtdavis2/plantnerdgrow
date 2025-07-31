@@ -900,7 +900,7 @@ p {
     border: 1px solid var(--border-color);
 }
 
-/* Merch item image backgrounds */
+/* Image container backgrounds to prevent white flash */
 .items-grid .item-image {
     background: #F7F7F7;
 }
