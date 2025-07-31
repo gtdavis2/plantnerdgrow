@@ -10,6 +10,9 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 body {
@@ -19,6 +22,9 @@ body {
     background-color: var(--background-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 /* Modern CSS Variables - Blue on Black Theme */
