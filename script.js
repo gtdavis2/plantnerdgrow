@@ -200,10 +200,12 @@ function initMobileMenu() {
             mobileOverlay.style.display = 'none';
             mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
             mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
         } else {
             mobileOverlay.style.display = 'flex';
             mobileToggle.innerHTML = '<span class="sr-only">Close</span>&times;';
             mobileToggle.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
         }
     });
     
@@ -212,6 +214,7 @@ function initMobileMenu() {
         mobileOverlay.style.display = 'none';
         mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
         mobileToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
     });
     
     // Close when clicking outside
@@ -220,6 +223,7 @@ function initMobileMenu() {
             mobileOverlay.style.display = 'none';
             mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
             mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
         }
     });
     
@@ -229,6 +233,7 @@ function initMobileMenu() {
             mobileOverlay.style.display = 'none';
             mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
             mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
         }
     });
     
@@ -239,6 +244,7 @@ function initMobileMenu() {
             mobileOverlay.style.display = 'none';
             mobileToggle.innerHTML = '<span class="sr-only">Menu</span>☰';
             mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
         });
     });
 }
