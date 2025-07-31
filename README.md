@@ -17,7 +17,7 @@ plantnerdgrow/
 ├── index.html              # Home page
 ├── strains.html            # Strains showcase
 ├── products.html           # Product categories
-├── store.html              # Merchandise
+├── merch.html              # Merchandise
 ├── styles.css              # Main stylesheet
 ├── script.js               # JavaScript functionality
 ├── assets/
