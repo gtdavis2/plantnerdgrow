@@ -304,14 +304,7 @@ p {
 }
 
 .section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--primary-color) 50%, transparent 100%);
-    opacity: 0.3;
+    content: none;
 }
 
 .section::after {
