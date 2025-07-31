@@ -1,13 +1,70 @@
 /* Modern Cannabis Brand Website Styles */
 
-/* CSS Reset and Base Styles */
-/* Force remove any blue lines at the top */
+/* Self-Hosted Fonts */
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('assets/fonts/Space Grotesk Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('assets/fonts/Space Grotesk Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('assets/fonts/Space Grotesk Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('assets/fonts/Space Grotesk SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('assets/fonts/Space Grotesk Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sarina';
+    src: url('assets/fonts/Sarina.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cotton';
+    src: url('assets/fonts/Cotton-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Aggressive border removal for persistent blue line issue */
 html::before, body::before, *[style*="border"], *[style*="outline"] {
-    display: none !important;
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
 }
+
+/* Reset and Base Styles */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -187,7 +244,7 @@ p {
 .nav-link {
     color: var(--primary-color);
     text-decoration: none;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Cotton', sans-serif;
     font-weight: 400;
     transition: var(--transition);
     position: relative;
@@ -466,7 +523,7 @@ p {
     display: none;
     background: none;
     border: none;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Cotton', sans-serif;
     font-size: 1.5rem;
     color: var(--text-primary);
     cursor: pointer;
@@ -556,7 +613,7 @@ p {
     text-align: center;
     color: var(--primary-color);
     text-decoration: none;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Cotton', sans-serif;
     font-weight: 400;
     transition: var(--transition);
     margin: 0 auto;
@@ -577,7 +634,7 @@ p {
     background: none;
     border: none;
     color: var(--text-primary);
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Cotton', sans-serif;
     font-size: 2rem;
     cursor: pointer;
     z-index: 100000;

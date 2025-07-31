@@ -251,18 +251,8 @@ function initMobileMenu() {
 
 // Performance optimizations
 function initPerformanceOptimizations() {
-    // Preload critical resources
-    const criticalResources = [
-        'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sarina&family=Rock+Salt&display=swap'
-    ];
-    
-    criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = 'style';
-        document.head.appendChild(link);
-    });
+    // Self-hosted fonts - no external preloading needed
+    // Fonts are loaded via CSS @font-face declarations
     
     // Service Worker registration (if available)
     if ('serviceWorker' in navigator) {
