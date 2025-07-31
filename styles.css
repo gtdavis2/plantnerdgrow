@@ -106,6 +106,9 @@ p {
     background: var(--background-primary);
     z-index: 1000;
     transition: var(--transition);
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .header-content {
@@ -126,7 +129,7 @@ p {
 .logo-image {
     height: 40px;
     width: auto;
-    filter: drop-shadow(0 0 10px rgba(74, 144, 226, 0.3));
+    filter: drop-shadow(0 0 5px rgba(74, 144, 226, 0.2));
 }
 
 .logo-text {
@@ -135,7 +138,7 @@ p {
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+    text-shadow: 0 0 5px rgba(74, 144, 226, 0.2);
 }
 
 .logo:hover .logo-image {
@@ -659,7 +662,7 @@ p {
 
 .strain-image {
     width: 100%;
-    height: 250px;
+    height: 400px;
     overflow: hidden;
     position: relative;
 }
@@ -748,7 +751,7 @@ p {
 
 .merch-image img {
     width: 100%;
-    height: 250px;
+    height: 400px;
     object-fit: cover;
     display: block;
     transition: var(--transition);
