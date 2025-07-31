@@ -161,8 +161,8 @@ p {
 }
 
 .logo-text {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-style: italic;
+    font-family: 'Sarina', cursive;
+    font-style: normal;
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--primary-color);
@@ -187,7 +187,8 @@ p {
 .nav-link {
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 500;
+    font-family: 'Cotton', sans-serif;
+    font-weight: 400;
     transition: var(--transition);
     position: relative;
 }
@@ -465,6 +466,7 @@ p {
     display: none;
     background: none;
     border: none;
+    font-family: 'Cotton', sans-serif;
     font-size: 1.5rem;
     color: var(--text-primary);
     cursor: pointer;
@@ -554,7 +556,8 @@ p {
     text-align: center;
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 500;
+    font-family: 'Cotton', sans-serif;
+    font-weight: 400;
     transition: var(--transition);
     margin: 0 auto;
     position: relative;
@@ -574,6 +577,7 @@ p {
     background: none;
     border: none;
     color: var(--text-primary);
+    font-family: 'Cotton', sans-serif;
     font-size: 2rem;
     cursor: pointer;
     z-index: 100000;

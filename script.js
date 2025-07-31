@@ -253,7 +253,7 @@ function initMobileMenu() {
 function initPerformanceOptimizations() {
     // Preload critical resources
     const criticalResources = [
-        'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sarina&display=swap'
+        'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sarina&family=Cotton:wght@400&display=swap'
     ];
     
     criticalResources.forEach(resource => {
