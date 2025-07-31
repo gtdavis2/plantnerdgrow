@@ -42,18 +42,25 @@ body {
     box-shadow: none !important;
 }
 
-/* Modern CSS Variables - Blue on Black Theme */
+/* Modern CSS Variables - Plant Nerd Brand Colors */
 :root {
-    --primary-color: #4a90e2; /* Medium blue */
-    --secondary-color: #7bb3f0; /* Lighter blue */
-    --accent-color: #6ba3d6; /* Accent blue */
-    --text-primary: #ffffff; /* White text on black */
-    --text-secondary: #b0c4de; /* Light blue-gray text */
-    --background-primary: #000000; /* Black background */
-    --background-secondary: #000000; /* Pure black background */
-    --border-color: #333333; /* Dark gray borders */
-    --shadow-light: 0 2px 8px rgba(74, 144, 226, 0.2);
-    --shadow-medium: 0 4px 16px rgba(74, 144, 226, 0.3);
+    --sky-blue: #4FB0EA; /* Sky Blue - PMS 2190 C */
+    --bright-blue: #005DF7; /* Bright Blue - PMS 2387 C */
+    --white: #F7F7F7; /* White */
+    --black: #000000; /* Black - PMS Black 6 C */
+    --neon-blue: #00DEFF; /* Neon Blue - PMS 311 C */
+    
+    /* Primary brand colors */
+    --primary-color: var(--bright-blue); /* Bright Blue as primary */
+    --secondary-color: var(--sky-blue); /* Sky Blue as secondary */
+    --accent-color: var(--neon-blue); /* Neon Blue as accent */
+    --text-primary: var(--white); /* White text */
+    --text-secondary: var(--sky-blue); /* Sky Blue for secondary text */
+    --background-primary: var(--black); /* Black background */
+    --background-secondary: var(--black); /* Black background */
+    --border-color: var(--sky-blue); /* Sky Blue borders */
+    --shadow-light: 0 2px 8px rgba(79, 176, 234, 0.2); /* Sky Blue shadow */
+    --shadow-medium: 0 4px 16px rgba(79, 176, 234, 0.3); /* Sky Blue shadow */
     --border-radius: 8px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -73,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic;
     font-weight: 700;
     color: var(--text-primary);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px rgba(79, 176, 234, 0.3);
     letter-spacing: 0.05em;
     transform: skew(-2deg);
     animation: glow 3s ease-in-out infinite alternate;
@@ -81,10 +88,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        text-shadow: 0 0 20px rgba(79, 176, 234, 0.3);
     }
     to {
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+        text-shadow: 0 0 30px rgba(79, 176, 234, 0.6), 0 0 40px rgba(0, 222, 255, 0.4);
     }
 }
 
@@ -245,7 +252,7 @@ p {
         2px 2px 4px rgba(0, 0, 0, 0.9),
         4px 4px 8px rgba(0, 0, 0, 0.8),
         6px 6px 12px rgba(0, 0, 0, 0.7),
-        0 0 20px rgba(0, 0, 0, 0.6);
+        0 0 20px rgba(79, 176, 234, 0.6);
     animation: fadeInUp 1s ease-out 0.2s both;
     line-height: 1.4;
 }
@@ -271,7 +278,7 @@ p {
     font-weight: 700;
     font-size: clamp(2.5rem, 4vw, 4rem);
     color: var(--text-primary);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px rgba(79, 176, 234, 0.3);
     letter-spacing: 0.05em;
     transform: skew(-2deg);
     animation: glow 2s ease-in-out infinite alternate;
@@ -300,13 +307,13 @@ p {
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    box-shadow: 0 0 15px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 0 15px rgba(0, 93, 247, 0.3);
 }
 
 .btn:hover {
     background: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(74, 144, 226, 0.5), var(--shadow-medium);
+    box-shadow: 0 0 25px rgba(79, 176, 234, 0.5), var(--shadow-medium);
 }
 
 .btn-secondary {
@@ -320,7 +327,7 @@ p {
 .btn-secondary:hover {
     background: var(--text-primary);
     color: var(--background-primary);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(247, 247, 247, 0.3);
 }
 
 /* Modern Sections */
@@ -555,8 +562,8 @@ p {
 
 .mobile-menu-overlay .nav-link:hover {
     color: var(--secondary-color);
-    text-shadow: 0 0 8px rgba(123, 179, 240, 0.4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 8px rgba(79, 176, 234, 0.4);
+    border-bottom: 1px solid rgba(247, 247, 247, 0.3);
 }
 
 /* Mobile menu close button */
@@ -669,7 +676,7 @@ p {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    background: linear-gradient(90deg, var(--neon-blue), var(--sky-blue));
     transform: scaleX(0);
     transition: var(--transition);
 }
@@ -682,7 +689,7 @@ p {
 .feature-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--neon-blue), var(--sky-blue));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1051,12 +1058,12 @@ p {
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
     :root {
-        --primary-color: #000000;
-        --secondary-color: #333333;
-        --accent-color: #0066cc;
-        --text-primary: #000000;
-        --text-secondary: #333333;
-        --border-color: #000000;
+        --primary-color: var(--black);
+        --secondary-color: var(--black);
+        --accent-color: var(--bright-blue);
+        --text-primary: var(--black);
+        --text-secondary: var(--black);
+        --border-color: var(--black);
     }
 }
 
@@ -1080,7 +1087,7 @@ p {
 .nav-link:focus,
 .form-input:focus,
 .social-link:focus {
-    outline: 2px solid var(--accent-color);
+    outline: 2px solid var(--neon-blue);
     outline-offset: 2px;
 }
 
@@ -1125,10 +1132,10 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--secondary-color);
+    background: var(--sky-blue);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color);
+    background: var(--bright-blue);
 } 
