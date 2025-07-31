@@ -1,11 +1,21 @@
 /* Modern Cannabis Brand Website Styles */
 
 /* CSS Reset and Base Styles */
+/* Force remove any blue lines at the top */
+html::before, body::before, *[style*="border"], *[style*="outline"] {
+    display: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border-top: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 html {
