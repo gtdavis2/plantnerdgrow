@@ -947,7 +947,7 @@ p {
 
 /* Image container backgrounds to prevent white flash */
 .items-grid .item-image {
-    background: #F7F7F7;
+    background: #000000;
 }
 
 .merch-image img {
