@@ -108,12 +108,14 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    background: var(--background-primary);
+    background: red;
     z-index: 1000;
     transition: var(--transition);
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .header-content {
@@ -121,6 +123,10 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
 }
 
 .logo {
@@ -199,6 +205,11 @@ p {
     background: url('assets/hero_image.jpg') center/cover;
     color: white;
     position: relative;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .hero-content {
