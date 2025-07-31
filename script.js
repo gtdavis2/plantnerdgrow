@@ -176,53 +176,11 @@ function initMobileMenu() {
     // Create a separate mobile menu overlay
     const mobileOverlay = document.createElement('div');
     mobileOverlay.className = 'mobile-menu-overlay';
-    mobileOverlay.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #000000;
-        z-index: 99999;
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 5rem 2rem 2rem 2rem;
-        gap: 2rem;
-    `;
     
     // Copy navigation links to overlay
     const navLinks = nav.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         const clonedLink = link.cloneNode(true);
-        clonedLink.style.cssText = `
-            font-size: 1.5rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid transparent;
-            width: auto;
-            text-align: center;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            margin: 0 auto;
-            position: relative;
-        `;
-        
-        // Add hover effect
-        clonedLink.addEventListener('mouseenter', () => {
-            clonedLink.style.color = 'var(--secondary-color)';
-            clonedLink.style.textShadow = '0 0 8px rgba(123, 179, 240, 0.4)';
-            clonedLink.style.borderBottom = '1px solid rgba(255, 255, 255, 0.3)';
-        });
-        
-        clonedLink.addEventListener('mouseleave', () => {
-            clonedLink.style.color = 'var(--primary-color)';
-            clonedLink.style.textShadow = 'none';
-            clonedLink.style.borderBottom = '1px solid transparent';
-        });
-        
         mobileOverlay.appendChild(clonedLink);
     });
     
@@ -230,28 +188,7 @@ function initMobileMenu() {
     const closeButton = document.createElement('button');
     closeButton.innerHTML = '&times;';
     closeButton.setAttribute('aria-label', 'Close menu');
-    closeButton.style.cssText = `
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: none;
-        color: var(--text-primary);
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 100000;
-        transition: var(--transition);
-    `;
-    
-    // Add hover effect to close button
-    closeButton.addEventListener('mouseenter', () => {
-        closeButton.style.color = 'var(--accent-color)';
-    });
-    
-    closeButton.addEventListener('mouseleave', () => {
-        closeButton.style.color = 'var(--text-primary)';
-    });
-    
+    closeButton.className = 'mobile-menu-close';
     mobileOverlay.appendChild(closeButton);
     document.body.appendChild(mobileOverlay);
     
