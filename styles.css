@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--background-primary);
@@ -67,7 +67,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -76,13 +76,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom Stylized Title Font */
 .hero h1 {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 700;
+    font-family: 'Sarina', cursive;
+    font-style: normal;
+    font-weight: 400;
     color: var(--text-primary);
     text-shadow: 0 0 20px rgba(79, 176, 234, 0.3);
     letter-spacing: 0.05em;
-    transform: skew(-2deg);
+    transform: none;
     animation: glow 3s ease-in-out infinite alternate;
 }
 
@@ -247,7 +247,7 @@ p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     color: var(--text-primary);
-    font-weight: 700;
+    font-weight: 600;
     text-shadow: 
         2px 2px 4px rgba(0, 0, 0, 0.9),
         4px 4px 8px rgba(0, 0, 0, 0.8),
@@ -273,14 +273,14 @@ p {
 }
 
 .page-header h1 {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 700;
+    font-family: 'Sarina', cursive;
+    font-style: normal;
+    font-weight: 400;
     font-size: clamp(2.5rem, 4vw, 4rem);
     color: var(--text-primary);
     text-shadow: 0 0 20px rgba(79, 176, 234, 0.3);
     letter-spacing: 0.05em;
-    transform: skew(-2deg);
+    transform: none;
     animation: glow 2s ease-in-out infinite alternate;
     margin-bottom: 1.5rem;
 }
@@ -302,7 +302,7 @@ p {
     color: white;
     text-decoration: none;
     border-radius: var(--border-radius);
-    font-weight: 600;
+    font-weight: 500;
     transition: var(--transition);
     border: none;
     cursor: pointer;
@@ -770,7 +770,7 @@ p {
 .strain-info h3 {
     color: var(--text-primary);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -779,7 +779,7 @@ p {
 .strain-lineage {
     color: var(--text-secondary);
     font-size: 0.9rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.4;
     margin: 0;
 }
