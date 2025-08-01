@@ -237,44 +237,33 @@ p {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 1rem 0;
     border: none;
     outline: none;
     box-shadow: none;
     margin: 0;
+    position: relative;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-54%);
     text-decoration: none;
     transition: var(--transition);
+    z-index: 1001;
 }
 
 .logo-image {
-    height: 40px;
+    height: 200px;
     width: auto;
     filter: none;
 }
 
-.logo-text {
-    font-family: 'Sarina', cursive;
-    font-style: normal;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--primary-color);
-    text-shadow: none;
-}
-
 .logo:hover .logo-image {
     filter: drop-shadow(0 0 15px rgba(123, 179, 240, 0.5));
-}
-
-.logo:hover .logo-text {
-    color: var(--secondary-color);
-    text-shadow: 0 0 15px rgba(123, 179, 240, 0.5);
 }
 
 .nav {
