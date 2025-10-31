@@ -1,7 +1,7 @@
 {
     "name": "Plant Nerd - Premium Cannabis",
     "short_name": "Plant Nerd",
-    "description": "Premium cannabis grown in West Michigan. Where the Nerds get their weed!",
+    "description": "Premium cannabis grown in West Michigan. Where the Nerds get their weed.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#000000",
